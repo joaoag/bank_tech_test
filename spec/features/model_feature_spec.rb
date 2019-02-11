@@ -1,8 +1,8 @@
-feature 'Model:' do
-  scenario 'does lots of things' do
+# feature 'Model:' do
+#   scenario 'does lots of things' do
     
-  end
-end
+#   end
+# end
 
 
 # pure RSpec
