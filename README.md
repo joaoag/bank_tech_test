@@ -10,9 +10,21 @@ Features from the Makers Brief:
   
 User stories 
 
-As an XXXX
-So that I XXX
-I XXXXX
+As a customer
+So that I don't have to carry around cash
+I want a bank account
+
+As a customer
+So that I can increase my balance
+I want to deposit money in my account
+
+As a customer
+So that I can pay for things
+I want to make withdrawals from my account
+
+As a customer
+So that I can review my finances
+I want a record of my deposits and withdrawals
 
 ```
 
