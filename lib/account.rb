@@ -9,7 +9,7 @@ attr_accessor :balance, :transactions
 
   def display_balance
     calculate_balance
-    p @balance.flatten.inject(:+)
+    @balance.flatten.inject(:+)
   end
   
   def deposit(amount, date)
@@ -17,12 +17,13 @@ attr_accessor :balance, :transactions
   end
 
   def withdrawal(amount, date)
-    @balance << {date => -amount }
+    @transactions << { date => -amount }
   end
 
 private 
 
   def calculate_balance
+    @balance = [0]
     @transactions.each do | hash |
     @balance << hash.values
     end
