@@ -159,41 +159,7 @@ $ bundle
 ```
 4. You can see the different directories, with the `ls` command.
 
-### Database ###
 
-5. If you do not have it already, install *psql* on your local machine. Connect to your database and create two of them to be able to run the test and the app, using the `CREATE DATABASE` command.<br/>
-Make one called *Bankify_development* and one called *Bankify_test*.<br/>
-
-```shell
-$ psql
-admin= CREATE DATABASE Bankify_development;
-admin= CREATE DATABASE Bankify_test;
-```
-
-6. Exit from psql and from the command line run the `rake` command followed by the `db:migrate` command. This will create your tables in your development DB.<br/>
-
-```shell
-$ rake db:migrate
-```
-
-7. From the command line run the `rake` command followed by the `db:auto_migrate RACK_ENV=testing` command. This will create your tables in your test DB.<br/>
-
-```shell
-$ rake db:migrate RACK_ENV=testing
-```
-
-8. Connect to psql and connect to your database using the `\c` command.<br/>
-Once you are connected to the database you've chosen, you can list the tables using the `\dt` command.<br/>
-
-```shell
-$ psql
-admin= \c Bankify_development;
-Bankify_development= \dt
-```
-9. You can connect to a specific table by using the `SELECT * FROM tablename;` command.<br/>
-
-```shell
-Bankify_development= SELECT * FROM users;
 ```
 
 ### Run the tests ###
