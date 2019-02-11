@@ -16,8 +16,8 @@ attr_accessor :balance, :transactions
     @transactions << { date => amount }
   end
 
-  def withdrawal(amount)
-    @balance << -amount
+  def withdrawal(amount, date)
+    @balance << {date => -amount }
   end
 
 private 

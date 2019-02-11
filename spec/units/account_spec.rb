@@ -30,6 +30,12 @@ describe 'Account balance with dates' do
     expect(account.transactions).to eq(["10/10/2018"=>10])
   end
 
+  it 'records the date of withdrawals' do
+    account.deposit(10, "10/10/2018")
+    account.withdrawal(10, "20/10/2018")
+    expect(account.transactions).to eq([{"10/10/2018"=>10}, {"10/10/2018"=>-10}])
+  end
+
 end
 
 
