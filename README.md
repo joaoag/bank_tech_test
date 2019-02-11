@@ -24,7 +24,7 @@ I want to make withdrawals from my account
 
 As a customer
 So that I can review my finances
-I want a record of my deposits and withdrawals
+I want to know when I made deposits and withdrawals
 
 ```
 
