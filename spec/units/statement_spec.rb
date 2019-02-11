@@ -10,7 +10,7 @@ describe 'Statement' do
   end
 
   it 'displays single transaction' do
-    expect{statement.print_transactions(single_transaction)}.to output("10/10/2020 || 10").to_stdout
+    expect{statement.print_transactions(single_transaction)}.to output("10/10/2020 || 10\n").to_stdout
   end
 
 end

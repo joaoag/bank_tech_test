@@ -5,7 +5,9 @@ class Statement
   end
 
   def print_transactions(transactions)
-    
+    transactions.each do | hash |
+      hash.each { |k, v| puts  "#{k} || #{v}" }
+    end
   end
 
 end
