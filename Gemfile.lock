@@ -44,6 +44,9 @@ GEM
     net-http-pipeline (1.0.1)
     nokogiri (1.10.1)
       mini_portile2 (~> 2.4.0)
+    orderly (0.0.3)
+      capybara (>= 1.1)
+      rspec (>= 2.14)
     parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
@@ -90,6 +93,7 @@ GEM
       hirb
       simplecov
     simplecov-html (0.10.2)
+    timecop (0.9.1)
     travis (1.8.9)
       backports
       faraday (~> 0.9)
@@ -99,6 +103,8 @@ GEM
       launchy (~> 2.1)
       pusher-client (~> 0.4)
       typhoeus (~> 0.6, >= 0.6.8)
+    travis-lint (2.0.0)
+      json
     typhoeus (0.8.0)
       ethon (>= 0.8.0)
     unicode-display_width (1.4.1)
@@ -110,14 +116,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
+  orderly
   pry
   rake
   rspec
   rubocop (= 0.56.0)
   simplecov
   simplecov-console
+  timecop
   travis
+  travis-lint
 
 RUBY VERSION
    ruby 2.5.0p0
