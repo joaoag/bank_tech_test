@@ -1,3 +1,5 @@
+require 'statement'
+
 class Account
 
 attr_accessor :balance, :transactions
@@ -5,9 +7,10 @@ attr_accessor :balance, :transactions
   def initialize
     @balance = [0]
     @transactions = []
+    @statement = Statement.new
   end
 
-  def display_balance
+  def return_balance
     calculate_balance
     @balance.flatten.inject(:+)
   end

@@ -10,12 +10,12 @@ describe 'Account balance' do
     
     it 'can be increased with #deposit()' do
       account.deposit(10, "10/10/2020")
-      expect(account.display_balance).to eq(10)
+      expect(account.return_balance).to eq(10)
     end
     
     it 'can be reduced with #withdrawal()' do
       account.withdrawal(5, "20/10/2020")
-      expect(account.display_balance).to eq(5)
+      expect(account.return_balance).to eq(5)
     end
   
 end
