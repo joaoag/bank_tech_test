@@ -17,4 +17,5 @@ describe 'Statement' do
   it 'displays single withdrawal transaction' do
     expect{statement.print_transactions(single_withdrawal)}.to output("10/10/2020 || || 5\n").to_stdout
   end
+
 end

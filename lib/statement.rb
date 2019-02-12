@@ -6,7 +6,13 @@ class Statement
 
   def print_transactions(transactions)
     transactions.each do | hash |
-      hash.each { |k, v| puts  "#{k} || #{v}" }
+      hash.each do |k, v| 
+        if v > 0
+          puts  "#{k} || #{v}" 
+        else
+          puts  "#{k} || || #{v*-1}"
+        end
+      end
     end
   end
 
