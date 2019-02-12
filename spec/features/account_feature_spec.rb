@@ -3,10 +3,8 @@ require 'statement'
 
 describe 'Account' do
 
-  expected_statement_output = "date || credit || debit || balance
-14/01/2012 || || -500.0 || 2500.0
-13/01/2012 || 2000.0 || 3000.0
-10/01/2012 || 1000.0 || 1000.0"
+  expected_statement_output = "date || credit || debit || balance\n14/01/2012 || || -500.0 || 2500.0\n13/01/2012 || 2000.0 || 3000.0\n10/01/2012 || 1000.0 || 1000.0\n"
+
   
   account = Account.new
   statement = Statement.new
