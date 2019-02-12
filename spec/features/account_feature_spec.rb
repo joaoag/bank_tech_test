@@ -13,7 +13,7 @@ describe 'Account' do
     account.deposit(1000.00, "10/01/2012")
     account.deposit(2000.00, "13/01/2012")
     account.withdrawal(500.00, "14/01/2012")
-    expect{statement.print_transactions(account.statement)}.to output(expected_statement_output).to_stdout
+    expect { statement.print_transactions(account.statement) }.to output(expected_statement_output).to_stdout
   end
 
 end
