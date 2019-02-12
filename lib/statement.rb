@@ -16,4 +16,10 @@ class Statement
     end
   end
 
+  def print_balance
+    
+  end
+
 end
+
+# "|| 0"
