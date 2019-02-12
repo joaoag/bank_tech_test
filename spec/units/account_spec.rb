@@ -2,7 +2,7 @@ require 'account'
 
 describe Account do  
       
-  account = Account.new
+  let(:account) { Account.new }
   
   context 'balance' do
   
@@ -16,6 +16,7 @@ describe Account do
     end
       
     it 'can be reduced with #withdrawal()' do
+      account.deposit(10, "10/10/2020")
       account.withdrawal(5, "20/10/2020")
       expect(account.return_balance).to eq(5)
     end

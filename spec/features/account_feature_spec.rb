@@ -6,8 +6,8 @@ describe 'Feature: Account and Statement' do
   context 'record and display' do
     
     expected_statement_output = "date || credit || debit || balance\n14/01/2012 || || -500.00 || 2500.00\n13/01/2012 || 2000.00 || 3000.00\n10/01/2012 || 1000.00 || 1000.00\n"
-    account = Account.new
-    statement = Statement.new
+    let(:account) { Account.new }
+    let(:statement) { Statement.new }
     
     it 'transactions, their dates and resulting balance' do
       account.deposit(1000, "10/01/2012")

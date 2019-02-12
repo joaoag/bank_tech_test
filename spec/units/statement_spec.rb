@@ -1,7 +1,8 @@
 require 'statement'
 
 describe 'Statement' do
-  statement = Statement.new
+  let(:statement) { Statement.new }
+
   single_deposit = [{ "10/10/2020" => [10, 10] }]
   single_withdrawal = [{ "10/10/2020" => [-5, 5] }]
 
