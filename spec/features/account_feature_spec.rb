@@ -15,7 +15,6 @@ describe 'Feature: Account and Statement' do
       account.withdrawal(500, "14/01/2012")
       expect { statement.print_transactions(account.statement) }.to output(expected_statement_output).to_stdout
     end
-  
   end
 
 end
