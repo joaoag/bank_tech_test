@@ -4,7 +4,7 @@ describe 'Statement' do
 
   let(:statement) { Statement.new }
   
-  expected_headers = "date || credit || debit || balance"
+  expected_headers = "date || credit || debit || balance\n"
 
   single_credit = [{ "10/10/2020" => [10, 10] }]
   credit_statement = "date || credit || debit || balance\n10/10/2020 || 10.00 || 10.00\n"

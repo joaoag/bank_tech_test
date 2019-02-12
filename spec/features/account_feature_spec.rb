@@ -1,5 +1,6 @@
 require 'account'
 require 'statement'
+require 'transaction'
 
 describe 'Feature: Account, Transaction and Statement' do
 
