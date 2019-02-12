@@ -5,10 +5,10 @@ class Statement
   end
 
   def print_transactions(statement)
-    self.headers
-    statement.reverse.each do | hash |
+    headers
+    statement.reverse.each do |hash|
       hash.each do |k, v| 
-        if v[0] > 0
+        if (v[0]).positive?
           puts  "#{k} || #{v[0]} || #{v[1]}"
         else
           puts  "#{k} || || #{v[0]} || #{v[1]}"
@@ -18,5 +18,3 @@ class Statement
   end
 
 end
-
-# "|| 0"

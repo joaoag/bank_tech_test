@@ -90,6 +90,15 @@ Approach:
 * Repeat this until the MVP is met
 
 
+Program Structure:
+-----
+
+The Account class is responsible for monitoring the account history. It has methods for making withdrawals and deposits and keeping track of the dates on which they were made and the balance that resulted from these transactions.
+
+The Statement class is responsible for outputting this information into the format described in the 'Acceptance Criteria' section above.
+
+There are no dependencies between the classes.
+
 
 Planned Outcome:
 -----
@@ -118,7 +127,7 @@ Technologies used
 
 
 
-## How to use Bankify ##
+## How to use bank_tech_test ##
 
 System requirements
 -------
@@ -141,10 +150,10 @@ Use the `git clone` command and paste the clone URL then press enter :
 $ git clone 
 ```
 
-2. On your local machine go inside of the *Bankify* directory :
+2. On your local machine go inside of the *bank_tech_test* directory :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 ```
 3. To install all the *gems* contained in the *Gemfile*, install and run *Bundle* :
 Install :
@@ -164,47 +173,42 @@ $ bundle
 
 ### Run the tests ###
 
-1. Check that the codes are passing the test. From the root *Bankify* directory, run the *spec*.<br/>
+1. Check that the codes are passing the test. From the root *bank_tech_test* directory, run the *spec*.<br/>
 You can check all the files in one go:
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rspec
 ```
 To check only one file at a time :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rspec spec/file_name_spec.rb
 ```
 
-2. Check that the code respects the quality of the *Rubocop* guideline, by running `rubocop` from the *Bankify* directory :
+2. Check that the code respects the quality of the *Rubocop* guideline, by running `rubocop` from the *bank_tech_test* directory :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rubocop
 ```
 
 ## Run the app ##
 
-1. On the command line, from the root directory *Bankify*, use the `rails s` command :
+1. On the command line, from the root directory *bank_tech_test*, use the `irb` command :
 
 ```shell
-$ cd Bankify
-$ rails s
+$ cd bank_tech_test
+$ irb
 ```
+2. Follow the steps below to create an account, a statement, withdraw and deposit amounts and output the result of these to the console.
 
-You'll be able to see that the localhost port used is *3000*
+<img src="./screenshots/bank_tech_test_screenshot.png">
 
-1. Open your browser and type the url of your 
 
 
 
 ## Authors ##
 
 @joaoag (João Abbott-Gribben)
-
-
-## Acknowledgements ##
-
-The following resources were consulted in part for this project:
