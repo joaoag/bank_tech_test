@@ -1,14 +1,22 @@
 class Statement
 
+  attr_reader :output
+  
+  def initialize
+    @output = ""
+  end
+
   def headers
-    "date || credit || debit || balance"
+    "date || credit || debit || balance" + "\n"
   end
 
   def print_transactions(statement)
-    puts headers
+    @output = ""
+    @output << headers
     statement.reverse.each do |hash|
     hash_formatter(hash)
     end
+    puts @output
   end
 
 private
@@ -20,13 +28,15 @@ private
   end
 
   def statement_single_line_format(k,v)
-    output = ""
-    if (v[0]).positive?
-      output << "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}"
-    else
-      output <<  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
-    end
-      puts output
+    (v[0]).positive? ? credit_to_string(k,v) : debit_to_string(k,v)
+  end
+
+  def credit_to_string(k,v)
+    @output << "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}" + "\n"
+  end
+
+  def debit_to_string(k,v)
+    @output<< "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}" + "\n"
   end
 
 end
