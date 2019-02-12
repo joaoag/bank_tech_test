@@ -23,4 +23,8 @@ describe 'Statement' do
     expect{statement.print_balance(account_balance)}.to output("|| 10\n").to_stdout
   end
 
+  it 'displays column headers and multiple transactions and balances' do
+
+  end
+
 end
