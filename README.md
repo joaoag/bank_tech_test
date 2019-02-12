@@ -90,6 +90,15 @@ Approach:
 * Repeat this until the MVP is met
 
 
+Program Structure:
+-----
+
+The Account class is responsible for monitoring the account history. It has methods for making withdrawals and deposits and keeping track of the dates on which they were made and the balance that resulted from these transactions.
+
+The Statement class is responsible for outputting this information into the format described in the 'Acceptance Criteria' section above.
+
+There are no dependencies between the classes.
+
 
 Planned Outcome:
 -----
@@ -187,24 +196,19 @@ $ rubocop
 
 ## Run the app ##
 
-1. On the command line, from the root directory *bank_tech_test*, use the `rails s` command :
+1. On the command line, from the root directory *bank_tech_test*, use the `irb` command :
 
 ```shell
 $ cd bank_tech_test
-$ rails s
+$ irb
 ```
+2. Follow the steps below to create an account, a statement, withdraw and deposit amounts and output the result of these to the console.
 
-You'll be able to see that the localhost port used is *3000*
+<img src="./screenshots/bank_tech_test_screenshot.png">
 
-1. Open your browser and type the url of your 
 
 
 
 ## Authors ##
 
 @joaoag (João Abbott-Gribben)
-
-
-## Acknowledgements ##
-
-The following resources were consulted in part for this project:

@@ -1,5 +1,3 @@
-require 'statement'
-
 class Account
 
   attr_accessor :balance, :transactions, :statement
