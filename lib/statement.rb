@@ -10,7 +10,7 @@ class Statement
         if v > 0
           puts  "#{k} || #{v}" 
         else
-          puts  "#{k} || || #{v*-1}"
+          puts  "#{k} || || #{v.abs}"
         end
       end
     end
