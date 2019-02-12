@@ -16,10 +16,6 @@ class Statement
     end
   end
 
-  def print_balance(display_balance)
-    puts "|| #{display_balance}"
-  end
-
 end
 
 # "|| 0"
