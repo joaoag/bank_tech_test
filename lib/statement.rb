@@ -11,14 +11,20 @@ class Statement
     end
   end
 
+private
+
   def hash_formatter(hash)
     hash.each do |k, v| 
-        if (v[0]).positive?
-          puts  "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}"
-        else
-          puts  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
-        end
-      end
+      statement_single_line_format(k,v)
+    end
+  end
+
+  def statement_single_line_format(k,v)
+    if (v[0]).positive?
+      puts  "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}"
+    else
+      puts  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
+    end
   end
 
 end
