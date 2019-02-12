@@ -1,11 +1,11 @@
 class Statement
 
   def headers
-    puts "date || credit || debit || balance"
+    "date || credit || debit || balance"
   end
 
   def print_transactions(statement)
-    headers
+    puts headers
     statement.reverse.each do |hash|
     hash_formatter(hash)
     end
@@ -26,7 +26,7 @@ private
     else
       output <<  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
     end
-    puts output
+      puts output
   end
 
 end
