@@ -3,14 +3,18 @@ require 'statement'
 
 describe 'Statement' do
   statement = Statement.new
-  single_transaction = [{"10/10/2020"=>10}]
+  single_deposit = [{"10/10/2020"=>10}]
+  single_withdrawal = [{"10/10/2020"=>-5}]
 
   it 'displays column headers' do
     expect{statement.headers}.to output("date || credit || debit || balance\n").to_stdout
   end
 
-  it 'displays single transaction' do
-    expect{statement.print_transactions(single_transaction)}.to output("10/10/2020 || 10\n").to_stdout
+  it 'displays single deposit transaction' do
+    expect{statement.print_transactions(single_deposit)}.to output("10/10/2020 || 10\n").to_stdout
   end
 
+  it 'displays single withdrawal transaction' do
+    expect{statement.print_transactions(single_withdrawal)}.to output("10/10/2020 || || 5\n").to_stdout
+  end
 end
