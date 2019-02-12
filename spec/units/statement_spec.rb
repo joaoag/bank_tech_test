@@ -3,28 +3,19 @@ require 'statement'
 
 describe 'Statement' do
   statement = Statement.new
-  single_deposit = [{"10/10/2020"=>10}]
-  single_withdrawal = [{"10/10/2020"=>-5}]
+  single_deposit = [{"10/10/2020"=>[10.00, 10.00]}]
+  single_withdrawal = [{"10/10/2020"=>[-5.00, 5.00]}]
 
   it 'displays column headers' do
     expect{statement.headers}.to output("date || credit || debit || balance\n").to_stdout
   end
 
   it 'displays single deposit transaction' do
-    expect{statement.print_transactions(single_deposit)}.to output("10/10/2020 || 10\n").to_stdout
+    expect{statement.print_transactions(single_deposit)}.to output( "date || credit || debit || balance\n10/10/2020 || 10.0 || 10.0\n").to_stdout
   end
 
   it 'displays single withdrawal transaction' do
-    expect{statement.print_transactions(single_withdrawal)}.to output("10/10/2020 || || 5\n").to_stdout
-  end
-
-  it 'displays single balance' do
-    account_balance = 10
-    expect{statement.print_balance(account_balance)}.to output("|| 10\n").to_stdout
-  end
-
-  it 'displays column headers and multiple transactions and balances' do
-
+    expect{statement.print_transactions(single_withdrawal)}.to output("date || credit || debit || balance\n10/10/2020 || || -5.0 || 5.0\n").to_stdout
   end
 
 end
