@@ -20,11 +20,13 @@ private
   end
 
   def statement_single_line_format(k,v)
+    output = ""
     if (v[0]).positive?
-      puts  "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}"
+      output << "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}"
     else
-      puts  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
+      output <<  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
     end
+    puts output
   end
 
 end
