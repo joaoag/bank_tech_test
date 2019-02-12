@@ -118,7 +118,7 @@ Technologies used
 
 
 
-## How to use Bankify ##
+## How to use bank_tech_test ##
 
 System requirements
 -------
@@ -141,10 +141,10 @@ Use the `git clone` command and paste the clone URL then press enter :
 $ git clone 
 ```
 
-2. On your local machine go inside of the *Bankify* directory :
+2. On your local machine go inside of the *bank_tech_test* directory :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 ```
 3. To install all the *gems* contained in the *Gemfile*, install and run *Bundle* :
 Install :
@@ -164,33 +164,33 @@ $ bundle
 
 ### Run the tests ###
 
-1. Check that the codes are passing the test. From the root *Bankify* directory, run the *spec*.<br/>
+1. Check that the codes are passing the test. From the root *bank_tech_test* directory, run the *spec*.<br/>
 You can check all the files in one go:
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rspec
 ```
 To check only one file at a time :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rspec spec/file_name_spec.rb
 ```
 
-2. Check that the code respects the quality of the *Rubocop* guideline, by running `rubocop` from the *Bankify* directory :
+2. Check that the code respects the quality of the *Rubocop* guideline, by running `rubocop` from the *bank_tech_test* directory :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rubocop
 ```
 
 ## Run the app ##
 
-1. On the command line, from the root directory *Bankify*, use the `rails s` command :
+1. On the command line, from the root directory *bank_tech_test*, use the `rails s` command :
 
 ```shell
-$ cd Bankify
+$ cd bank_tech_test
 $ rails s
 ```
 
