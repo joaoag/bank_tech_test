@@ -9,9 +9,9 @@ class Statement
     statement.reverse.each do |hash|
       hash.each do |k, v| 
         if (v[0]).positive?
-          puts  "#{k} || #{v[0]} || #{v[1]}"
+          puts  "#{k} || #{'%.2f' %v[0]} || #{'%.2f' % v[1]}"
         else
-          puts  "#{k} || || #{v[0]} || #{v[1]}"
+          puts  "#{k} || || #{'%.2f' %v[0]} || #{'%.2f' %v[1]}"
         end
       end
     end
