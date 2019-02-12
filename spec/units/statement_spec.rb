@@ -18,8 +18,9 @@ describe 'Statement' do
     expect{statement.print_transactions(single_withdrawal)}.to output("10/10/2020 || || 5\n").to_stdout
   end
 
-  it 'displays single balance at date' do
-    expect{statement.print_balance}.to output("|| 0").to_stdout
+  it 'displays single balance' do
+    account_balance = 10
+    expect{statement.print_balance(account_balance)}.to output("|| 10\n").to_stdout
   end
 
 end
