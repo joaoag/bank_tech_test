@@ -3,15 +3,21 @@ require 'account'
 describe Account do  
       
   let(:account) { Account.new }
-  
+  let(:transaction) { double :transaction }
+
+  before do
+    allow(Transaction).to receive(:amount).and_return(10)
+  end
+
   context 'balance' do
   
+
     it 'starts at 0' do
       expect(account.balance).to eq([0])
     end
       
     it 'can be increased with #deposit()' do
-      account.deposit(10, "10/10/2020")
+      account.deposit(deposit)
       expect(account.return_balance).to eq(10)
     end
       
