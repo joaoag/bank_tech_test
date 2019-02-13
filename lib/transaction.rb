@@ -6,7 +6,7 @@ class Transaction
 
   def initialize(amount)
     @amount = amount
-    @date = Date.new.strftime("%d/%m/%Y")
+    @date = Date.today.strftime("%d/%m/%Y")
   end
   
 end
