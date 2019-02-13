@@ -66,7 +66,7 @@ date || credit || debit || balance
 Testing:
   * Started with a feature test 
   * All tests passing
-  * Test coverage high? (>95%)
+  * Test coverage high (currently 100%)
   * Unit tests mock the dependencies of the object they are testing
 
 Readability:
@@ -121,7 +121,7 @@ Testing:
 Design:
   * Each method is fewer than 7 lines
   * Classes are fewer than 50 lines
-  * Clear separation between your program logic and output (Eg for Ruby: Do you call `puts` only once in your program?)
+  * Clear separation between your program logic and output (Eg for Ruby: only calling `puts` once in the program)
 
     
 **Strict Requirements:**
