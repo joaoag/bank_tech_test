@@ -23,9 +23,9 @@ describe Account do
     end
       
     it 'can be reduced with #withdrawal()' do
-      account.deposit(10, "10/10/2020")
-      account.withdrawal(5, "20/10/2020")
-      expect(account.return_balance).to eq(5)
+      account.deposit(transaction)
+      account.withdrawal(transaction)
+      expect(account.return_balance).to eq(0)
     end
    
   end
