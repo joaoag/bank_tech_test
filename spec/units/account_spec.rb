@@ -6,7 +6,8 @@ describe Account do
   let(:transaction) { double :transaction }
 
   before do
-    allow(Transaction).to receive(:amount).and_return(10)
+    allow(transaction).to receive(:amount).and_return(10)
+    allow(transaction).to receive(:date).and_return("10/10/2020")
   end
 
   context 'balance' do
@@ -17,7 +18,7 @@ describe Account do
     end
       
     it 'can be increased with #deposit()' do
-      account.deposit(deposit)
+      account.deposit(transaction)
       expect(account.return_balance).to eq(10)
     end
       

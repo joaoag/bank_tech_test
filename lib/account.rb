@@ -13,9 +13,9 @@ class Account
     @balance.flatten.inject(:+)
   end
     
-  def deposit(amount, date)    
-    @transactions << { date => amount }
-    @statement << { date => [amount, return_balance] }
+  def deposit(transaction)    
+    @transactions << { transaction.date => transaction.amount }
+    @statement << {transaction.date => [transaction.amount, self.return_balance]}
   end
 
   def withdrawal(amount, date)
