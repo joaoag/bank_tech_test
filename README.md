@@ -42,7 +42,13 @@ Features spec:
 
 ### Acceptance criteria
 
-Normal
+_Normal Requirements:_ achieved apart from three line limit warnings
+
+_Additional Requirements:_ achieved
+
+_Strict Requirements:_ achieved apart from loc limit for classes by four 
+
+**Normal Requirements**
 
 **Given** a client makes a deposit of 1000 on 10-01-2012  
 **And** a deposit of 2000 on 13-01-2012  
@@ -93,18 +99,19 @@ Design:
 * Each method & class is (almost) as small as possible (see above)
 
 Common Problems Avoided:
- One or two classes that do all the work
- One class is significantly longer than all of the others
- Most methods don't return anything, instead they modify instance variables
- The feature tests don't use a test framework (e.g. RSpec or Jasmine)
- The decimal points are missing on the end of the numbers
- The tests only pass today, because the dates aren't mocked or passed in as arguments
- Transaction is abbreviated to `trans` or `txn`
- A Transaction class that has a method that prints itself
+ One or two classes that do all the work <br/>
+ One class is significantly longer than all of the others <br/>
+ Most methods don't return anything, instead they modify instance variables<br/>
+ The feature tests don't use a test framework (e.g. RSpec or Jasmine)<br/>
+ The decimal points are missing on the end of the numbers<br/>
+ The tests only pass today, because the dates aren't mocked or passed in as arguments<br/>
+ Transaction is abbreviated to `trans` or `txn`<br/>
+ A Transaction class that has a method that prints itself<br/>
 
 
 
-Additional Requirements:
+**Additional Requirements:**
+
 Testing:
   * Where possible always testing for behaviour, rather than state
   * Test descriptions read clearly
@@ -117,7 +124,7 @@ Design:
   * Clear separation between your program logic and output (Eg for Ruby: Do you call `puts` only once in your program?)
 
     
-Strict:
+**Strict Requirements:**
 
 Testing:
   * Project commit history clearly show evidence of a thorough TDD process
