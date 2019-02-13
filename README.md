@@ -130,7 +130,8 @@ Readability:
 Design:
   * Program has at least three classes that I can reasonably justify
   * Methods are all fewer than 5 lines (excluding keyword `end` and `def` name)
-  * Classes are _not_ fewer than 30 lines (excluding keyword `end` and `def` name). Longest class is 35 lines.
+  * Classes are _not_ fewer than 30 lines (excluding keyword `end` and `def` name). Longest class is 34 lines.
+  * Program mostly uses appropriate data structures to hold the necessary values your program needs. Ideally I would convert the @headers value into a symbol 
 
 
 
