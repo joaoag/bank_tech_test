@@ -33,8 +33,8 @@ describe Account do
   context 'dates' do
 
     it 'dates are recorded at deposit transactions' do
-      account.deposit(10, "10/10/2018")
-      expect(account.transactions[-1]).to eq("10/10/2018" => 10)
+      account.deposit(transaction)
+      expect(account.transactions[-1]).to eq("10/10/2020" => 10)
     end
 
     it 'dates are recorded at withdrawal transactions' do
