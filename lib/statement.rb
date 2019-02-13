@@ -1,18 +1,15 @@
 class Statement
 
-  attr_reader :output
+  attr_reader :output, :headers
   
   def initialize
     @output = ""
-  end
-
-  def headers
-    "date || credit || debit || balance" + "\n"
+    @headers = "date || credit || debit || balance" + "\n"
   end
 
   def print_transactions(statement)
     @output = ""
-    @output << headers
+    @output << @headers
     statement.reverse.each do |hash|
       hash_formatter(hash)
     end

@@ -130,7 +130,7 @@ Readability:
 Design:
   * Program has at least three classes that I can reasonably justify
   * Methods are all fewer than 5 lines (excluding keyword `end` and `def` name)
-  * Classes are all fewer than 30 lines (excluding keyword `end` and `def` name)
+  * Classes are _not_ fewer than 30 lines (excluding keyword `end` and `def` name). Longest class is 35 lines.
 
 
 
