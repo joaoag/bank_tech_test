@@ -1,4 +1,4 @@
-require 'date'
+require 'Date'
 
 class Transaction
 
@@ -6,7 +6,7 @@ class Transaction
 
   def initialize(amount)
     @amount = amount
-    @date = DateTime.now.strftime("%d/%m/%Y")
+    @date = Date.new.strftime("%d/%m/%Y")
   end
   
 end

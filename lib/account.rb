@@ -15,12 +15,12 @@ class Account
     
   def deposit(transaction)    
     @transactions << { transaction.date => transaction.amount }
-    @statement << {transaction.date => [transaction.amount, self.return_balance]}
+    @statement << { transaction.date => [transaction.amount, return_balance] }
   end
 
   def withdrawal(transaction)
     @transactions << { transaction.date => - transaction.amount }
-    @statement << {transaction.date => [-transaction.amount, self.return_balance]}
+    @statement << { transaction.date => [-transaction.amount, return_balance] }
   end
 
   private 

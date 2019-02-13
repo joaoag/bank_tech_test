@@ -42,6 +42,8 @@ Features spec:
 
 ### Acceptance criteria
 
+Normal
+
 **Given** a client makes a deposit of 1000 on 10-01-2012  
 **And** a deposit of 2000 on 13-01-2012  
 **And** a withdrawal of 500 on 14-01-2012  
@@ -54,6 +56,83 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+Testing:
+  * Started with a feature test 
+  * All tests passing
+  * Test coverage high? (>95%)
+  * Unit tests mock the dependencies of the object they are testing
+
+Readability:
+  * Rubocop - only three warnings for line length
+  * Variable, method, & class names clear and descriptive (see Rubocop warnings...)
+  * Can offer simple explanation of how the program works
+  "The program tracks deposits and withdrawals, the date they were made and the resulting balance. Using this stored information, it can also print out a statement showing the account history. It's made of three classes: Statement, Transaction and Account"
+
+README & Commits:
+  * Describes how to install dependencies, run tests, and run the project
+  * Describes my approach
+  * Describes how I structured my code and why
+  * Includes a screenshot of your running app
+  * Has reasonable spelling & grammar
+
+  * Commit messages clearly describe what that commit does
+
+Design:
+* Classes adhere to single responsibility principle:
+    
+    Account: Keeps track of account history (withdrawals, deposits, balance, dates of these)
+
+    Statement: Outputs account history into console table
+
+    Transaction: Carries value of transaction and transaction date information to Account
+
+    _For future:_
+    I would split Statement into FormatStatement and PrintStatement
+
+* Each method & class is (almost) as small as possible (see above)
+
+Common Problems Avoided:
+ One or two classes that do all the work
+ One class is significantly longer than all of the others
+ Most methods don't return anything, instead they modify instance variables
+ The feature tests don't use a test framework (e.g. RSpec or Jasmine)
+ The decimal points are missing on the end of the numbers
+ The tests only pass today, because the dates aren't mocked or passed in as arguments
+ Transaction is abbreviated to `trans` or `txn`
+ A Transaction class that has a method that prints itself
+
+
+
+Additional Requirements:
+Testing:
+  * Where possible always testing for behaviour, rather than state
+  * Test descriptions read clearly
+  * Make appropriate use of the testing framework's methods to keep your test code clean ('let' and 'context' blocks used - to be used 'subject')
+
+
+Design:
+  * Each method is fewer than 7 lines
+  * Classes are fewer than 50 lines
+  * Clear separation between your program logic and output (Eg for Ruby: Do you call `puts` only once in your program?)
+
+    
+Strict:
+
+Testing:
+  * Project commit history clearly show evidence of a thorough TDD process
+  * Mocked the dependency Time, tests would pass if ran at any point in the future
+
+
+Readability:
+  * Line lengths are _not_ fewer than 80 characters. Longest in production code is 82. Longest in test files is 171 (!)
+
+Design:
+  * Program has at least three classes that I can reasonably justify
+  * Methods are all fewer than 5 lines (excluding keyword `end` and `def` name)
+  * Classes are all fewer than 30 lines (excluding keyword `end` and `def` name)
+
+
 
 
 Minimum Viable Product (MVP):
@@ -100,7 +179,7 @@ The Statement class is responsible for outputting this information into the form
 There are no dependencies between the classes.
 
 
-Planned Outcome:
+Outcome:
 -----
 
 * Everything created using strict TDD (all tests passing, 100% test coverage)

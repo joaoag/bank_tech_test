@@ -22,7 +22,7 @@ describe 'Statement' do
     end
 
     it 'single withdrawal transaction with date and balance' do
-      expect{ statement.print_transactions(single_debit) }.to output(debit_statement).to_stdout
+      expect { statement.print_transactions(single_debit) }.to output(debit_statement).to_stdout
     end
   end
   
