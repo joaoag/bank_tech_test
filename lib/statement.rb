@@ -8,8 +8,8 @@ class Statement
   end
 
   def print_transactions(statement)
-    @output = ""
-    @output << @headers
+    output = ""
+    @output << headers
     statement.reverse.each do |hash|
       hash_formatter(hash)
     end
@@ -29,11 +29,11 @@ private
   end
 
   def cred_to_str(date, valu_bal)
-    @output << "#{date} || #{'%.2f' % valu_bal[0]} || #{'%.2f' % valu_bal[1]}" + "\n"
+    output << "#{date} || #{'%.2f' % valu_bal[0]} || #{'%.2f' % valu_bal[1]}" + "\n"
   end
 
   def deb_to_str(date, valu_bal)
-    @output << "#{date} || || #{'%.2f' % valu_bal[0]} || #{'%.2f' % valu_bal[1]}" + "\n"
+    output << "#{date} || || #{'%.2f' % valu_bal[0]} || #{'%.2f' % valu_bal[1]}" + "\n"
   end
 
 end
